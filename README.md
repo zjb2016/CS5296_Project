@@ -3,10 +3,10 @@ This is project repo of group 2 of CS5296 Cloud Computing.
 
 The project is developed on AWS EMR 6.4.0.
 
-Setting enviroment:
+## Setting enviroment:
 
 *Create Cluster on EMR*
-  - Release label:emr-6.4.0
+  - Release label:emr-6.4.0 (python3.7)
   - Hadoop distribution:Amazon 3.2.1
   - Applications:Spark 3.1.2, JupyterHub 1.4.1, JupyterEnterpriseGateway 2.1.0, Hive 3.1.2, TensorFlow 2.4.1, Livy 0.7.1
   
@@ -35,4 +35,10 @@ Add configuation and bootstap actions, original file saved in /configuration
 
 Others setting by default.
 
+## Project abstract
 
+This project is aimed at sentiment analysis on a text dataset, we trying to use ml lib provided by spark to do binary classification.
+
+**clf-without-preprocess.ipynb** is a naive experiment with ml lib.
+**clf-with-sparknlp.ipynb** is based on previous experiment, upgrading with sparknlp preprocess pipeline.
+**tensorflow.ipynb** is an unfinished attempt, the code with added preprocess procedure broke on emr(time out , still not figure out),also we trying to use Elephas to do the distributed computing with keras, it's hard to handle the package dependency on EMR, so I just post a naive version.
