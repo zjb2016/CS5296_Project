@@ -35,10 +35,18 @@ Add configuation and bootstap actions, original file saved in /configuration
 
 Others setting by default.
 
-## Project abstract
+## Project Structure
 
 This project is aimed at sentiment analysis on a text dataset, we trying to use ml lib provided by spark to do binary classification.
 
-**clf-without-preprocess.ipynb** is a naive experiment with ml lib.
-**clf-with-sparknlp.ipynb** is based on previous experiment, upgrading with sparknlp preprocess pipeline.
-**tensorflow.ipynb** is an unfinished attempt, the code with added preprocess procedure broke on emr(time out , still not figure out),also we trying to use Elephas to do the distributed computing with keras, it's hard to handle the package dependency on EMR, so I just post a naive version.
+- **clf-without-preprocess.ipynb** is a naive experiment with ml lib.
+- **clf-with-sparknlp.ipynb** is based on previous experiment, upgrading with sparknlp preprocess pipeline.
+- **tensorflow.ipynb** is an unfinished attempt, the code with added preprocess procedure broke on emr(time out , still not figure out),also we trying to use Elephas to do the distributed computing with keras, it's hard to handle the package dependency on EMR, so I just post a naive version.
+
+
+- **/data** is the data set we use , containing 25000 records both test and train file.
+-  **/configuration** source scripts of setting sparknlp enviroment on EMR.
+
+## References
+- https://spark.apache.org/docs/latest/ml-guide.html
+- http://nlp.johnsnowlabs.com/
