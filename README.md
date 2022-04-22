@@ -33,6 +33,23 @@ Add configuation and bootstap actions, original file saved in /configuration
 ![e92f33c6f8136b07eb636b78ebbde5c](https://user-images.githubusercontent.com/19788285/164483025-e98d8854-f8ec-466b-a985-11f391b9143e.png)
 ![a3eaae2de494466521dd189b9bf1731](https://user-images.githubusercontent.com/19788285/164483058-1f532063-5d54-4ca3-be68-edba2d18358b.png)
 
+
+##  Create an EMR Notebook
+Please start a notebook server, connect it to the cluster you just created(be patient, it takes a while).
+
+### Optional:
+
+In order to use and write files to `hdfs:///` without limitations, we need to grant sudo rights for `livy` user after SSHing to master node.
+
+To connect master node:
+```bash
+~$ ssh -i <EC2 key pair>.pem hadoop@<host>.ec2
+```
+Please grant access when logged in via:
+```bash
+emr-cluster@xxx:~$ sudo usermod -a -G hdfsadmingroup livy
+```
+
 Others setting by default.
 
 ## Project Structure
